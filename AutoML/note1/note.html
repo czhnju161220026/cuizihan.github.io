@@ -1,0 +1,649 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>NNI · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../Docker&K8s/">
+            
+                <a href="../../Docker&K8s/">
+            
+                    
+                    Docker和K8s
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../Docker&K8s/note1/note.html">
+            
+                <a href="../../Docker&K8s/note1/note.html">
+            
+                    
+                    Docker基础学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../Docker&K8s/note2/note.html">
+            
+                <a href="../../Docker&K8s/note2/note.html">
+            
+                    
+                    Docker微服务学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../Docker&K8s/note3/note.html">
+            
+                <a href="../../Docker&K8s/note3/note.html">
+            
+                    
+                    在虚拟机上搭建K8s集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../Docker&K8s/note4/note.html">
+            
+                <a href="../../Docker&K8s/note4/note.html">
+            
+                    
+                    K8s简单实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../Distributed/">
+            
+                <a href="../../Distributed/">
+            
+                    
+                    深度学习分布式实验
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../Distributed/note1/note.html">
+            
+                <a href="../../Distributed/note1/note.html">
+            
+                    
+                    Pytorch DDP和horovod分布式实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    自动化机器学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="note.html">
+            
+                <a href="note.html">
+            
+                    
+                    NNI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >NNI</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5FAE;&#x8F6F;-netural-network-intelligencenni">&#x5FAE;&#x8F6F; Netural Network Intelligence(NNI)</h1>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>NNI&#x662F;&#x5FAE;&#x8F6F;&#x5728;2018&#x5E74;&#x5F00;&#x6E90;&#x7684;&#x5DE5;&#x5177;&#x5305;&#xFF0C;&#x53EF;&#x4EE5;&#x6709;&#x6548;&#x7684;&#x5E2E;&#x52A9;&#x7528;&#x6237;&#x81EA;&#x52A8;&#x5316;&#x8C03;&#x53C2;&#x3002;NNI&#x5177;&#x6709;&#x5982;&#x4E0B;&#x7684;&#x7279;&#x70B9;&#xFF1A;</p>
+<ul>
+<li><strong>&#x6613;&#x4E8E;&#x4F7F;&#x7528;</strong>&#xFF1A;NNI&#x901A;&#x8FC7;pip&#x5B89;&#x88C5;&#xFF0C;&#x65E0;&#x9700;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#xFF1B;NNI&#x652F;&#x6301;&#x6240;&#x6709;&#x4E3B;&#x6D41;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x6846;&#x67B6;&#xFF08;Pytorch&#xFF0C;TensorFlow&#xFF0C;Keras&#xFF0C;MXNet&#xFF09;&#xFF1B;&#x4F7F;&#x7528;NNI&#x53EA;&#x9700;&#x8981;&#x5BF9;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x7B80;&#x5355;&#x4FEE;&#x6539;&#xFF1B;NNI&#x6709;&#x8BE6;&#x7EC6;&#x7684;&#x6587;&#x6863;&#xFF1B;</li>
+<li><strong>&#x9AD8;&#x6548;</strong>&#xFF1A;NNI&#x5185;&#x7F6E;&#x4E86;&#x4E30;&#x5BCC;&#x7684;&#x8C03;&#x53C2;&#x7B97;&#x6CD5;&#x548C;&#x7EC8;&#x6B62;&#x7B97;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5F53;&#x524D;&#x53C2;&#x6570;&#x8FD0;&#x884C;&#x6548;&#x679C;&#x7684;&#x53CD;&#x9988;&#x6765;<strong>&#x8C03;&#x6574;&#x641C;&#x7D22;&#x65B9;&#x5411;&#xFF0C;&#x52A0;&#x901F;&#x8C03;&#x53C2;&#x8FC7;&#x7A0B;</strong>&#x3002;&#x5F53;&#x5224;&#x5B9A;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x66F4;&#x597D;&#x7684;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x7EC8;&#x6B62;&#xFF08;&#x4E5F;&#x53EF;&#x4EE5;&#x4E00;&#x76F4;&#x641C;&#x7D22;&#xFF09;&#x3002;</li>
+</ul>
+<p>NNI&#x4E2D;&#x6709;&#x5982;&#x4E0B;&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x6982;&#x5FF5;&#xFF1A;</p>
+<ul>
+<li><p><strong>Experiment&#xFF08;&#x5B9E;&#x9A8C;&#xFF09;</strong>&#xFF1A;&#x5B9E;&#x9A8C;&#x662F;&#x4E00;&#x6B21;&#x627E;&#x5230;&#x6A21;&#x578B;&#x7684;&#x6700;&#x4F73;&#x8D85;&#x53C2;&#x7EC4;&#x5408;&#xFF0C;&#x6216;&#x6700;&#x597D;&#x7684;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x67B6;&#x6784;&#x7684;&#x4EFB;&#x52A1;&#x3002; &#x5B83;&#x7531; Trial &#x548C;&#x81EA;&#x52A8;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#x6240;&#x7EC4;&#x6210;&#x3002;</p>
+</li>
+<li><p><strong>&#x641C;&#x7D22;&#x7A7A;&#x95F4;</strong>&#xFF1A;&#x662F;&#x6A21;&#x578B;&#x8C03;&#x4F18;&#x7684;&#x8303;&#x56F4;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x8D85;&#x53C2;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x3002;</p>
+</li>
+<li><p><strong>Configuration&#xFF08;&#x914D;&#x7F6E;&#xFF09;</strong>&#xFF1A;&#x914D;&#x7F6E;&#x662F;&#x6765;&#x81EA;&#x641C;&#x7D22;&#x7A7A;&#x95F4;&#x7684;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5B9E;&#x4F8B;&#xFF0C;&#x6BCF;&#x4E2A;&#x8D85;&#x53C2;&#x90FD;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x503C;&#x3002;</p>
+</li>
+<li><p><strong>Trial</strong>: Trial &#x662F;&#x4E00;&#x6B21;&#x5C1D;&#x8BD5;&#xFF0C;&#x5B83;&#x4F1A;&#x4F7F;&#x7528;&#x67D0;&#x7EC4;&#x914D;&#x7F6E;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x4E00;&#x7EC4;&#x8D85;&#x53C2;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x7279;&#x5B9A;&#x7684;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x67B6;&#x6784;&#xFF09;&#x3002; Trial &#x4F1A;&#x57FA;&#x4E8E;&#x63D0;&#x4F9B;&#x7684;&#x914D;&#x7F6E;&#x6765;&#x8FD0;&#x884C;&#x3002;</p>
+</li>
+<li><p><strong>Tuner</strong>: Tuner &#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x52A8;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#xFF0C;&#x4F1A;&#x4E3A;&#x4E0B;&#x4E00;&#x4E2A; Trial &#x751F;&#x6210;&#x65B0;&#x7684;&#x914D;&#x7F6E;&#x3002; &#x65B0;&#x7684; Trial &#x4F1A;&#x4F7F;&#x7528;&#x8FD9;&#x7EC4;&#x914D;&#x7F6E;&#x6765;&#x8FD0;&#x884C;&#x3002;</p>
+</li>
+<li><p><strong>Assessor</strong>&#xFF1A;Assessor &#x5206;&#x6790; Trial &#x7684;&#x4E2D;&#x95F4;&#x7ED3;&#x679C;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x96C6;&#x4E0A;&#x5B9A;&#x671F;&#x7684;&#x7CBE;&#x5EA6;&#xFF09;&#xFF0C;&#x6765;&#x786E;&#x5B9A; Trial &#x662F;&#x5426;&#x5E94;&#x8BE5;&#x88AB;&#x63D0;&#x524D;&#x7EC8;&#x6B62;&#x3002;</p>
+</li>
+<li><p><strong>&#x8BAD;&#x7EC3;&#x5E73;&#x53F0;</strong>&#xFF1A;&#x662F; Trial &#x7684;&#x6267;&#x884C;&#x73AF;&#x5883;&#x3002; &#x6839;&#x636E; Experiment &#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x672C;&#x673A;&#xFF0C;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x7EC4;&#xFF0C;&#x6216;&#x5176;&#x5B83;&#x5927;&#x89C4;&#x6A21;&#x8BAD;&#x7EC3;&#x5E73;&#x53F0;&#xFF08;&#x5982;&#xFF0C;OpenPAI&#xFF0C;Kubernetes&#xFF09;&#x3002;</p>
+</li>
+</ul>
+<h2 id="nni&#x4E2D;&#x81EA;&#x52A8;&#x5316;&#x8C03;&#x53C2;&#x7684;&#x7528;&#x6CD5;">NNI&#x4E2D;&#x81EA;&#x52A8;&#x5316;&#x8C03;&#x53C2;&#x7684;&#x7528;&#x6CD5;</h2>
+<h3 id="1-&#x5B89;&#x88C5;">1. &#x5B89;&#x88C5;</h3>
+<pre><code class="lang-shell">python -m pip install --upgrade nni
+</code></pre>
+<h3 id="2-&#x4F7F;&#x7528;">2. &#x4F7F;&#x7528;</h3>
+<h4 id="21-&#x5B9A;&#x4E49;&#x53C2;&#x6570;&#x7A7A;&#x95F4;">2.1 &#x5B9A;&#x4E49;&#x53C2;&#x6570;&#x7A7A;&#x95F4;</h4>
+<p>NNI&#x4E2D;&#x53C2;&#x6570;&#x7A7A;&#x95F4;&#x7684;&#x5B9A;&#x4E49;&#x7531;&#x4E00;&#x4E2A;JSON&#x6587;&#x4EF6;&#x6307;&#x5B9A;&#xFF0C;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x53C2;&#x6570;&#x7A7A;&#x95F4;&#x6587;&#x4EF6;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json"><span class="hljs-comment">//search_space.json</span>
+{
+    <span class="hljs-string">&quot;epoch&quot;</span>: {
+        <span class="hljs-string">&quot;_type&quot;</span>: <span class="hljs-string">&quot;choice&quot;</span>,
+        <span class="hljs-string">&quot;_value&quot;</span>: [<span class="hljs-number">1</span>,<span class="hljs-number">5</span>,<span class="hljs-number">10</span>,<span class="hljs-number">15</span>,<span class="hljs-number">20</span>]
+    },
+    <span class="hljs-string">&quot;lr&quot;</span>: {
+        <span class="hljs-string">&quot;_type&quot;</span>: <span class="hljs-string">&quot;choice&quot;</span>,
+        <span class="hljs-string">&quot;_value&quot;</span>: [<span class="hljs-number">0.1</span>,<span class="hljs-number">0.01</span>,<span class="hljs-number">0.001</span>,<span class="hljs-number">0.0001</span>]
+    },
+    <span class="hljs-string">&quot;bz&quot;</span>: {
+        <span class="hljs-string">&quot;_type&quot;</span>: <span class="hljs-string">&quot;choice&quot;</span>,
+        <span class="hljs-string">&quot;_value&quot;</span>: [<span class="hljs-number">8</span>,<span class="hljs-number">16</span>,<span class="hljs-number">32</span>,<span class="hljs-number">64</span>,<span class="hljs-number">128</span>]
+    }
+}
+</code></pre>
+<p>&#x6BCF;&#x4E2A;&#x53C2;&#x6570;&#x90FD;&#x662F;&#x7531;&lt;&#x53C2;&#x6570;&#x540D;&gt; : &lt;&#x53C2;&#x6570;&#x5B9A;&#x4E49;&gt;&#x5B9A;&#x4E49;&#x7684;&#x3002;&#x53C2;&#x6570;&#x5B9A;&#x4E49;&#x4E2D;&#x6709;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x5206;&#x522B;&#x662F;<code>_type</code>&#x548C;<code>_value</code></p>
+<p><code>_type</code>&#x7684;&#x5E38;&#x7528;&#x53D6;&#x503C;&#x548C;&#x5B9A;&#x4E49;</p>
+<p><table>
+  <tr>
+    <th width="100px">&#x53D6;&#x503C;</th>
+    <th>&#x542B;&#x4E49;</th>
+  </tr>
+  <tr>
+    <td>choice</td>
+    <td>&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#xFF0C;&#x4ECE;_value&#x6240;&#x6307;&#x5B9A;&#x7684;&#x7A7A;&#x95F4;&#x4E2D;&#x9009;&#x53D6;&#x4E00;&#x4E2A;</td>
+  </tr>
+  <tr>
+    <td>randint</td>
+    <td>&#x968F;&#x673A;&#x6574;&#x6570;&#xFF0C;&#x6B64;&#x65F6;_value&#x5E94;&#x8BE5;&#x4E3A;[lower, upper], &#x7ED9;&#x51FA;&#x53C2;&#x6570;&#x7684;&#x8303;&#x56F4;</td>
+  </tr>
+  <tr>
+    <td>uniform</td>
+    <td>&#x5747;&#x5300;&#x5206;&#x5E03;&#xFF0C;&#x6B64;&#x65F6;_value&#x5E94;&#x8BE5;&#x4E3A;[lower, upper], &#x7ED9;&#x51FA;&#x53C2;&#x6570;&#x7684;&#x8303;&#x56F4;</td>
+  </tr></table></p>
+<p>&#x6B64;&#x5916;&#x8FD8;&#x53EF;&#x4EE5;&#x6709;quniform&#xFF0C;loguniform&#xFF0C; normal&#x7B49;&#x53D6;&#x503C;&#xFF0C;&#x4EE3;&#x8868;&#x751F;&#x6210;&#x7684;&#x53C2;&#x6570;&#x5E94;&#x8BE5;&#x6EE1;&#x8DB3;&#x67D0;&#x4E2A;&#x5206;&#x5E03;&#x3002;</p>
+<h4 id="22-&#x4FEE;&#x6539;&#x4EE3;&#x7801;">2.2 &#x4FEE;&#x6539;&#x4EE3;&#x7801;</h4>
+<p>&#x4FEE;&#x6539;&#x4EE3;&#x7801;&#xFF0C;&#x8BA9;&#x8BAD;&#x7EC3;&#x7A0B;&#x5E8F;&#x4ECE;NNI&#x83B7;&#x53D6;&#x8D85;&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x5C06;&#x8BAD;&#x7EC3;&#x7ED3;&#x679C;&#x53CD;&#x9988;&#x7ED9;NNI</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-keyword">import</span> nni
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">(params)</span>:</span>
+    cnn = CNN()
+    <span class="hljs-keyword">if</span> torch.cuda.is_available():
+        print(<span class="hljs-string">&quot;Use GPU&quot;</span>)
+        cnn = cnn.cuda()
+    <span class="hljs-comment"># &#x53C2;&#x6570; &#x8BAD;&#x7EC3;&#x6B21;&#x6570; Tenser&#x5927;&#x5C0F; &#x5B66;&#x4E60;&#x7387; &#x635F;&#x5931;&#x51FD;&#x6570; &#x4F18;&#x5316;&#x51FD;&#x6570;</span>
+    epoch_times = params.get(<span class="hljs-string">&apos;epoch&apos;</span>)
+    learning_rate = params.get(<span class="hljs-string">&apos;lr&apos;</span>)
+    batch_size = params.get(<span class="hljs-string">&apos;bz&apos;</span>)
+    <span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> range(epoch_times):
+        <span class="hljs-comment"># &#x8BAD;&#x7EC3;</span>
+        cnn.train()
+        ...
+        <span class="hljs-comment"># &#x9A8C;&#x8BC1;</span>
+        cnn.eval()
+        ...
+    accuracy = <span class="hljs-number">100</span> * float(correct) / float(total)
+    <span class="hljs-comment"># &#x5C06;&#x7ED3;&#x679C;&#x53CD;&#x9988;&#x7ED9;NNI</span>
+    nni.report_final_result(accuracy)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    <span class="hljs-comment"># params = {&apos;epoch&apos;:5, &apos;lr&apos;:0.1, &apos;bz&apos;:32}</span>
+    <span class="hljs-comment"># &#x6539;&#x4E3A;&#x4ECE;NNI&#x83B7;&#x53D6;&#x8D85;&#x53C2;&#x6570;</span>
+    params = nni.get_next_parameter()
+    main(params)
+</code></pre>
+<h4 id="23-&#x5B9A;&#x4E49;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">2.3 &#x5B9A;&#x4E49;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
+<p>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;yml&#x683C;&#x5F0F;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x91CC;&#x9762;&#x58F0;&#x660E;&#x641C;&#x7D22;&#x7A7A;&#x95F4;&#x3001;&#x8BAD;&#x7EC3;&#x6307;&#x4EE4;&#x3001;&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x4FE1;&#x606F;&#xFF1A;&#x5982;&#x4F7F;&#x7528;&#x7684;&#x8C03;&#x4F18;&#x7B97;&#x6CD5;&#xFF0C;&#x6700;&#x5927;&#x5C1D;&#x8BD5;&#x6B21;&#x6570;&#xFF0C;&#x6700;&#x5927;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#x7B49;&#x3002;</p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># config.yml</span>
+<span class="hljs-attr">authorName:</span> czh
+<span class="hljs-attr">experimentName:</span> example_mnist
+<span class="hljs-attr">trialConcurrency:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">maxExecDuration:</span> <span class="hljs-number">2</span>h
+<span class="hljs-attr">maxTrialNum:</span> <span class="hljs-number">20</span>
+<span class="hljs-comment">#choice: local, remote, pai</span>
+<span class="hljs-attr">trainingServicePlatform:</span> local
+<span class="hljs-attr">searchSpacePath:</span> search_space.json
+<span class="hljs-comment">#choice: true, false</span>
+<span class="hljs-attr">useAnnotation:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">tuner:</span>
+  <span class="hljs-comment">#choice: TPE, Random, Anneal, Evolution, BatchTuner, MetisTuner, GPTuner</span>
+  <span class="hljs-comment">#SMAC (SMAC should be installed through nnictl)</span>
+<span class="hljs-attr">  builtinTunerName:</span> TPE
+<span class="hljs-attr">  classArgs:</span>
+    <span class="hljs-comment">#choice: maximize, minimize</span>
+<span class="hljs-attr">    optimize_mode:</span> maximize
+<span class="hljs-attr">trial:</span>
+<span class="hljs-attr">  command:</span> python3 train.py
+<span class="hljs-attr">  codeDir:</span> .
+<span class="hljs-attr">  gpuNum:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">localConfig:</span>
+<span class="hljs-attr">  useActiveGpu:</span> <span class="hljs-literal">true</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x8BBE;&#x5B9A;&#x6700;&#x591A;&#x5C1D;&#x8BD5;20&#x6B21;&#xFF0C;&#x4F7F;&#x7528;TPE&#x8C03;&#x4F18;&#x7B97;&#x6CD5;&#xFF0C;&#x76EE;&#x6807;&#x662F;&#x6700;&#x5927;&#x5316;&#x51C6;&#x786E;&#x7387;&#x3002;</p>
+<h4 id="24-&#x8FD0;&#x884C;">2.4 &#x8FD0;&#x884C;</h4>
+<pre><code class="lang-shell">user$ nnictl create -c config.yml -p 9999
+INFO: expand searchSpacePath: search_space.json to /root/nni/search_space.json 
+INFO: expand codeDir: . to /root/nni/. 
+INFO: Starting restful server...
+INFO: Successfully started Restful server!
+INFO: Setting local config...
+INFO: Successfully set local config!
+INFO: Starting experiment...
+INFO: Successfully started experiment!
+------------------------------------------------------------------------------------
+The experiment id is gQoDo8dD
+The Web UI urls are: http://127.0.0.1:9999   http://114.212.81.50:9999   http://192.168.10.111:9999   http://10.1.10.10:9999   http://192.168.122.1:9999   http://172.17.0.1:9999
+------------------------------------------------------------------------------------
+
+You can use these commands to get more information about the experiment
+------------------------------------------------------------------------------------
+         commands                       description
+1. nnictl experiment show        show the information of experiments
+2. nnictl trial ls               list all of trial jobs
+3. nnictl top                    monitor the status of running experiments
+4. nnictl log stderr             show stderr log content
+5. nnictl log stdout             show stdout log content
+6. nnictl stop                   stop an experiment
+7. nnictl trial kill             kill a trial job by id
+8. nnictl --help                 get help information about nnictl
+------------------------------------------------------------------------------------
+Command reference document https://nni.readthedocs.io/en/latest/Tutorial/Nnictl.html
+------------------------------------------------------------------------------------
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x672C;&#x5730;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;Web&#x670D;&#x52A1;&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x4F7F;&#x7528;Web UI&#x76D1;&#x63A7;&#x8C03;&#x53C2;&#x60C5;&#x51B5;&#xFF1A;</p>
+<p><img src="figure/1.png" alt="image"></p>
+<p><img src="figure/3.png" alt="image"></p>
+<p><img src="figure/4.png" alt="image"></p>
+<h2 id="nni&#x4EE3;&#x7801;&#x521D;&#x6B65;&#x9605;&#x8BFB;">NNI&#x4EE3;&#x7801;&#x521D;&#x6B65;&#x9605;&#x8BFB;</h2>
+<p>NNI&#x7684;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#x4E3A;&#xFF1A;</p>
+<p><img src="figure/6.png" alt="image"></p>
+<p>&#x6211;&#x4EEC;&#x4E3B;&#x8981;&#x5173;&#x6CE8;&#x5B83;&#x7684;&#x8C03;&#x4F18;&#x90E8;&#x5206;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5B83;&#x7684;&#x8C03;&#x4F18;&#x90E8;&#x5206;&#x7684;&#x6838;&#x5FC3;&#x662F;&#x7531;Tuner&#x548C;Assessor&#x4E24;&#x4E2A;&#x7C7B;&#x534F;&#x4F5C;&#x5B8C;&#x6210;&#x3002;</p>
+<ul>
+<li>Tuner&#x9009;&#x62E9;&#x4E00;&#x7EC4;&#x53C2;&#x6570;&#xFF0C;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x63D0;&#x4EA4;&#x7ED9;&#x8BAD;&#x7EC3;&#x5E73;&#x53F0;&#x8FD0;&#x884C;&#x3002;</li>
+<li>&#x8BAD;&#x7EC3;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x8BAD;&#x7EC3;&#x5E73;&#x53F0;&#x5C06;&#x5EA6;&#x91CF;&#x6307;&#x6807;&#x8FD4;&#x56DE;&#x7ED9;NNI Core&#xFF0C;&#x7136;&#x540E;Tuner&#x6839;&#x636E;&#x5F97;&#x5230;&#x7684;&#x53CD;&#x9988;&#x8C03;&#x6574;&#x641C;&#x7D22;&#x65B9;&#x5411;&#xFF0C;&#x52A0;&#x901F;&#x8C03;&#x53C2;&#x8FC7;&#x7A0B;&#x3002;Assessor&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x7528;&#x6765;&#x5224;&#x5B9A;&#x7ED3;&#x679C;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x8DB3;&#x591F;&#x597D;&#xFF0C;&#x6765;&#x8FDB;&#x884C;&#x63D0;&#x524D;&#x7EC8;&#x6B62;&#x3002;</li>
+</ul>
+<h3 id="tuner">Tuner</h3>
+<p>&#x5728;NNI SDK&#x4E2D;&#xFF0C;Tunner&#x662F;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x57FA;&#x7C7B;&#xFF0C;&#x5B83;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#x4E09;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Copyright (c) Microsoft Corporation.</span>
+<span class="hljs-comment"># Licensed under the MIT license.</span>
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tuner</span><span class="hljs-params">(Recoverable)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generate_parameters</span><span class="hljs-params">(self, parameter_id, **kwargs)</span>:</span>
+        <span class="hljs-keyword">raise</span> NotImplementedError(<span class="hljs-string">&apos;Tuner: generate_parameters not implemented&apos;</span>)
+
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">receive_trial_result</span><span class="hljs-params">(self, parameter_id, parameters, value, **kwargs)</span>:</span>
+        <span class="hljs-keyword">raise</span> NotImplementedError(<span class="hljs-string">&apos;Tuner: receive_trial_result not implemented&apos;</span>)
+
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">update_search_space</span><span class="hljs-params">(self, search_space)</span>:</span>
+        <span class="hljs-keyword">raise</span> NotImplementedError(<span class="hljs-string">&apos;Tuner: update_search_space not implemented&apos;</span>)
+</code></pre>
+<ul>
+<li>update_search_space&#xFF1A;&#x66F4;&#x65B0;&#x53C2;&#x6570;&#x7A7A;&#x95F4;&#xFF0C;NNI&#x63A8;&#x8350;Tuner&#x7684;&#x5B9E;&#x73B0;&#x5E94;&#x8BE5;&#x53EF;&#x4EE5;&#x52A8;&#x6001;&#x66F4;&#x65B0;&#x53C2;&#x6570;&#x7A7A;&#x95F4;&#x3002;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x4E2D;&#x4F1A;&#x7528;&#x6765;&#x521D;&#x59CB;&#x5316;&#x53C2;&#x6570;&#x7A7A;&#x95F4;&#x3002;</li>
+<li>generate_parameters&#xFF1A;&#x9009;&#x62E9;&#x4E00;&#x7EC4;&#x8D85;&#x53C2;&#x6570;&#x5E76;&#x4EE5;dict&#x7684;&#x65B9;&#x5F0F;&#x8FD4;&#x56DE;&#xFF0C;&#x9700;&#x8981;&#x7684;&#x53C2;&#x6570;&#x4E3A;parameter_id&#xFF1A;int&#x4F5C;&#x4E3A;&#x8FD9;&#x4E00;&#x7EC4;&#x53C2;&#x6570;&#x7684;&#x5168;&#x5C40;&#x6807;&#x8BC6;&#x3002;&#x8FD9;&#x4E2A;id&#x5728;&#x53CD;&#x9988;&#x5EA6;&#x91CF;&#x6807;&#x51C6;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x7528;&#x5230;&#x3002;</li>
+<li>receive_trail_result&#xFF1A;&#x53CD;&#x9988;&#x67D0;&#x4E00;&#x7EC4;&#x53C2;&#x6570;&#x7684;&#x8BAD;&#x7EC3;&#x7ED3;&#x679C;&#x3002;</li>
+</ul>
+<p>&#x4F7F;&#x7528;&#x7684;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    tuner = HyperoptTuner(algorithm_name=<span class="hljs-string">&apos;tpe&apos;</span>, optimize_mode=<span class="hljs-string">&apos;maximize&apos;</span>)
+    search_space = {
+        <span class="hljs-string">&apos;lr&apos;</span>: {<span class="hljs-string">&apos;_type&apos;</span>: <span class="hljs-string">&apos;choice&apos;</span>, <span class="hljs-string">&apos;_value&apos;</span>: [<span class="hljs-number">0.1</span>, <span class="hljs-number">0.01</span>, <span class="hljs-number">0.001</span>, <span class="hljs-number">0.0001</span>, <span class="hljs-number">0.00001</span>]},
+        <span class="hljs-string">&apos;batch_size&apos;</span>: {<span class="hljs-string">&apos;_type&apos;</span>: <span class="hljs-string">&apos;choice&apos;</span>, <span class="hljs-string">&apos;_value&apos;</span>: [<span class="hljs-number">16</span>, <span class="hljs-number">32</span>, <span class="hljs-number">64</span>, <span class="hljs-number">128</span>]},
+        <span class="hljs-string">&apos;epoch&apos;</span>: {<span class="hljs-string">&apos;_type&apos;</span>: <span class="hljs-string">&apos;choice&apos;</span>, <span class="hljs-string">&apos;_value&apos;</span>: [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]},
+        <span class="hljs-string">&apos;dropout&apos;</span>: {<span class="hljs-string">&apos;_type&apos;</span>: <span class="hljs-string">&apos;uniform&apos;</span>, <span class="hljs-string">&apos;_value&apos;</span>:[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]}
+    }
+    tuner.update_search_space(search_space)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">5</span>):
+        params = tuner.generate_parameters(i)
+        print(params)
+        dummy_result = random.uniform(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>)
+        print(<span class="hljs-string">&apos;dummy result: %0.2f&apos;</span> % dummy_result)
+        tuner.receive_trial_result(i, params, dummy_result)
+<span class="hljs-string">&apos;&apos;&apos;
+{&apos;lr&apos;: 1e-05, &apos;batch_size&apos;: 128, &apos;epoch&apos;: 9, &apos;dropout&apos;: 0.7152185397939662}
+dummy result: 0.04
+{&apos;lr&apos;: 0.01, &apos;batch_size&apos;: 64, &apos;epoch&apos;: 3, &apos;dropout&apos;: 0.1931786101096048}
+dummy result: 0.29
+{&apos;lr&apos;: 0.0001, &apos;batch_size&apos;: 128, &apos;epoch&apos;: 9, &apos;dropout&apos;: 0.10897866399797518}
+dummy result: 0.45
+{&apos;lr&apos;: 1e-05, &apos;batch_size&apos;: 128, &apos;epoch&apos;: 9, &apos;dropout&apos;: 0.9369304163616936}
+dummy result: 0.18
+{&apos;lr&apos;: 0.01, &apos;batch_size&apos;: 64, &apos;epoch&apos;: 5, &apos;dropout&apos;: 0.35074203623620737}
+dummy result: 0.75
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>NNI&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;Tuner&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x652F;&#x6301;&#x652F;&#x6301;&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;Tuner</p>
+<table>
+<thead>
+<tr>
+<th>Tuner&#xFF08;&#x8C03;&#x53C2;&#x5668;&#xFF09;</th>
+<th>&#x7B97;&#x6CD5;&#x7B80;&#x4ECB;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#TPE"><strong>TPE</strong></a></td>
+<td>Tree-structured Parzen Estimator (TPE) &#x662F;&#x4E00;&#x79CD; sequential model-based optimization&#xFF08;SMBO&#xFF0C;&#x5373;&#x57FA;&#x4E8E;&#x5E8F;&#x5217;&#x6A21;&#x578B;&#x4F18;&#x5316;&#xFF09;&#x7684;&#x65B9;&#x6CD5;&#x3002; SMBO &#x65B9;&#x6CD5;&#x6839;&#x636E;&#x5386;&#x53F2;&#x6307;&#x6807;&#x6570;&#x636E;&#x6765;&#x6309;&#x987A;&#x5E8F;&#x6784;&#x9020;&#x6A21;&#x578B;&#xFF0C;&#x6765;&#x4F30;&#x7B97;&#x8D85;&#x53C2;&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x968F;&#x540E;&#x57FA;&#x4E8E;&#x6B64;&#x6A21;&#x578B;&#x6765;&#x9009;&#x62E9;&#x65B0;&#x7684;&#x8D85;&#x53C2;&#x3002; <a href="https://papers.nips.cc/paper/4443-algorithms-for-hyper-parameter-optimization.pdf" target="_blank">&#x53C2;&#x8003;&#x8BBA;&#x6587;</a></td>
+</tr>
+<tr>
+<td><a href="#Random"><strong>Random Search&#xFF08;&#x968F;&#x673A;&#x641C;&#x7D22;&#xFF09;</strong></a></td>
+<td>&#x5728;&#x8D85;&#x53C2;&#x4F18;&#x5316;&#x65F6;&#xFF0C;&#x968F;&#x673A;&#x641C;&#x7D22;&#x7B97;&#x6CD5;&#x5C55;&#x793A;&#x4E86;&#x5176;&#x60CA;&#x4EBA;&#x7684;&#x7B80;&#x5355;&#x548C;&#x6548;&#x679C;&#x3002; &#x5EFA;&#x8BAE;&#x5F53;&#x4E0D;&#x6E05;&#x695A;&#x8D85;&#x53C2;&#x7684;&#x5148;&#x9A8C;&#x5206;&#x5E03;&#x65F6;&#xFF0C;&#x91C7;&#x7528;&#x968F;&#x673A;&#x641C;&#x7D22;&#x4F5C;&#x4E3A;&#x57FA;&#x51C6;&#x3002; <a href="http://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf" target="_blank">&#x53C2;&#x8003;&#x8BBA;&#x6587;</a></td>
+</tr>
+<tr>
+<td><a href="#Anneal"><strong>Anneal&#xFF08;&#x9000;&#x706B;&#x7B97;&#x6CD5;&#xFF09;</strong></a></td>
+<td>&#x8FD9;&#x79CD;&#x7B80;&#x5355;&#x7684;&#x9000;&#x706B;&#x7B97;&#x6CD5;&#x4ECE;&#x5148;&#x524D;&#x7684;&#x91C7;&#x6837;&#x5F00;&#x59CB;&#xFF0C;&#x4F1A;&#x8D8A;&#x6765;&#x8D8A;&#x9760;&#x8FD1;&#x53D1;&#x73B0;&#x7684;&#x6700;&#x4F73;&#x70B9;&#x53D6;&#x6837;&#x3002; &#x6B64;&#x7B97;&#x6CD5;&#x662F;&#x968F;&#x673A;&#x641C;&#x7D22;&#x7684;&#x7B80;&#x5355;&#x53D8;&#x4F53;&#xFF0C;&#x5229;&#x7528;&#x4E86;&#x53CD;&#x5E94;&#x66F2;&#x9762;&#x7684;&#x5E73;&#x6ED1;&#x6027;&#x3002; &#x9000;&#x706B;&#x7387;&#x4E0D;&#x662F;&#x81EA;&#x9002;&#x5E94;&#x7684;&#x3002;</td>
+</tr>
+<tr>
+<td><a href="#Evolution"><strong>Na&#xEF;ve Evolution&#xFF08;&#x8FDB;&#x5316;&#x7B97;&#x6CD5;&#xFF09;</strong></a></td>
+<td>Na&#xEF;ve Evolution&#xFF08;&#x6734;&#x7D20;&#x8FDB;&#x5316;&#x7B97;&#x6CD5;&#xFF09;&#x6765;&#x81EA;&#x4E8E; Large-Scale Evolution of Image Classifiers&#x3002; &#x5B83;&#x4F1A;&#x57FA;&#x4E8E;&#x641C;&#x7D22;&#x7A7A;&#x95F4;&#x968F;&#x673A;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x79CD;&#x7FA4;&#x3002; &#x5728;&#x6BCF;&#x4E00;&#x4EE3;&#x4E2D;&#xFF0C;&#x4F1A;&#x9009;&#x62E9;&#x8F83;&#x597D;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x5E76;&#x5BF9;&#x5176;&#x4E0B;&#x4E00;&#x4EE3;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x53D8;&#x5F02;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x6539;&#x52A8;&#x4E00;&#x4E2A;&#x8D85;&#x53C2;&#xFF0C;&#x589E;&#x52A0;&#x6216;&#x51CF;&#x5C11;&#x4E00;&#x5C42;&#xFF09;&#x3002; Na&#xEF;ve Evolution &#x9700;&#x8981;&#x5F88;&#x591A;&#x6B21; Trial &#x624D;&#x80FD;&#x6709;&#x6548;&#xFF0C;&#x4F46;&#x5B83;&#x4E5F;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x4E5F;&#x5F88;&#x5BB9;&#x6613;&#x6269;&#x5C55;&#x65B0;&#x529F;&#x80FD;&#x3002; <a href="https://arxiv.org/pdf/1703.01041.pdf" target="_blank">&#x53C2;&#x8003;&#x8BBA;&#x6587;</a></td>
+</tr>
+<tr>
+<td><a href="#SMAC"><strong>SMAC</strong></a></td>
+<td>SMAC &#x57FA;&#x4E8E; Sequential Model-Based Optimization (SMBO&#xFF0C;&#x5373;&#x5E8F;&#x5217;&#x7684;&#x57FA;&#x4E8E;&#x6A21;&#x578B;&#x4F18;&#x5316;&#x65B9;&#x6CD5;)&#x3002; &#x5B83;&#x5229;&#x7528;&#x4F7F;&#x7528;&#x8FC7;&#x7684;&#x7ED3;&#x679C;&#x597D;&#x7684;&#x6A21;&#x578B;&#xFF08;&#x9AD8;&#x65AF;&#x968F;&#x673A;&#x8FC7;&#x7A0B;&#x6A21;&#x578B;&#xFF09;&#xFF0C;&#x5E76;&#x5C06;&#x968F;&#x673A;&#x68EE;&#x6797;&#x5F15;&#x5165;&#x5230; SMBO &#x4E2D;&#xFF0C;&#x6765;&#x5904;&#x7406;&#x5206;&#x7C7B;&#x53C2;&#x6570;&#x3002; SMAC &#x7B97;&#x6CD5;&#x5305;&#x88C5;&#x4E86; Github &#x7684; SMAC3&#x3002; &#x6CE8;&#x610F;&#xFF1A;SMAC &#x9700;&#x8981;&#x901A;&#x8FC7; <code>nnictl package</code> &#x547D;&#x4EE4;&#x6765;&#x5B89;&#x88C5;&#x3002; <a href="https://www.cs.ubc.ca/~hutter/papers/10-TR-SMAC.pdf" target="_blank">&#x53C2;&#x8003;&#x8BBA;&#x6587;&#xFF0C;</a> <a href="https://github.com/automl/SMAC3" target="_blank">Github &#x4EE3;&#x7801;&#x5E93;</a></td>
+</tr>
+<tr>
+<td><a href="#Batch"><strong>Batch Tuner&#xFF08;&#x6279;&#x91CF;&#x8C03;&#x53C2;&#x5668;&#xFF09;</strong></a></td>
+<td>Batch Tuner &#x80FD;&#x8BA9;&#x7528;&#x6237;&#x7B80;&#x5355;&#x7684;&#x63D0;&#x4F9B;&#x51E0;&#x7EC4;&#x914D;&#x7F6E;&#xFF08;&#x5982;&#xFF0C;&#x8D85;&#x53C2;&#x9009;&#x9879;&#x7684;&#x7EC4;&#x5408;&#xFF09;&#x3002; &#x5F53;&#x6240;&#x6709;&#x914D;&#x7F6E;&#x90FD;&#x6267;&#x884C;&#x5B8C;&#x540E;&#xFF0C;Experiment &#x5373;&#x7ED3;&#x675F;&#x3002; Batch Tuner &#x4EC5;&#x652F;&#x6301; choice &#x7C7B;&#x578B;&#x3002;</td>
+</tr>
+<tr>
+<td><a href="#GridSearch"><strong>Grid Search&#xFF08;&#x904D;&#x5386;&#x641C;&#x7D22;&#xFF09;</strong></a></td>
+<td>Grid Search &#x4F1A;&#x7A77;&#x4E3E;&#x5B9A;&#x4E49;&#x5728;&#x641C;&#x7D22;&#x7A7A;&#x95F4;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x8D85;&#x53C2;&#x7EC4;&#x5408;&#x3002; &#x904D;&#x5386;&#x641C;&#x7D22;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7684;&#x7C7B;&#x578B;&#x6709; choice, quniform, randint&#x3002;</td>
+</tr>
+<tr>
+<td><a href="#Hyperband"><strong>Hyperband</strong></a></td>
+<td>Hyperband &#x8BD5;&#x56FE;&#x7528;&#x6709;&#x9650;&#x7684;&#x8D44;&#x6E90;&#x6765;&#x63A2;&#x7D22;&#x5C3D;&#x53EF;&#x80FD;&#x591A;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x5E76;&#x53D1;&#x73B0;&#x6700;&#x597D;&#x7684;&#x7ED3;&#x679C;&#x3002; &#x5B83;&#x7684;&#x57FA;&#x672C;&#x601D;&#x8DEF;&#x662F;&#x751F;&#x6210;&#x5927;&#x91CF;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x5C11;&#x91CF;&#x7684;&#x8D44;&#x6E90;&#x6765;&#x627E;&#x5230;&#x6709;&#x53EF;&#x80FD;&#x597D;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x7EE7;&#x7EED;&#x8BAD;&#x7EC3;&#x627E;&#x5230;&#x5176;&#x4E2D;&#x66F4;&#x597D;&#x7684;&#x914D;&#x7F6E;&#x3002; <a href="https://arxiv.org/pdf/1603.06560.pdf" target="_blank">&#x53C2;&#x8003;&#x8BBA;&#x6587;</a></td>
+</tr>
+<tr>
+<td><a href="#NetworkMorphism"><strong>Network Morphism</strong></a></td>
+<td>Network Morphism &#x63D0;&#x4F9B;&#x4E86;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x6A21;&#x578B;&#x7684;&#x81EA;&#x52A8;&#x67B6;&#x6784;&#x641C;&#x7D22;&#x529F;&#x80FD;&#x3002; &#x6BCF;&#x4E2A;&#x5B50;&#x7F51;&#x7EDC;&#x90FD;&#x7EE7;&#x627F;&#x4E8E;&#x7236;&#x7F51;&#x7EDC;&#x7684;&#x77E5;&#x8BC6;&#x548C;&#x5F62;&#x6001;&#xFF0C;&#x5E76;&#x53D8;&#x6362;&#x7F51;&#x7EDC;&#x7684;&#x4E0D;&#x540C;&#x5F62;&#x6001;&#xFF0C;&#x5305;&#x62EC;&#x6DF1;&#x5EA6;&#xFF0C;&#x5BBD;&#x5EA6;&#xFF0C;&#x8DE8;&#x5C42;&#x8FDE;&#x63A5;&#xFF08;skip-connection&#xFF09;&#x3002; &#x7136;&#x540E;&#x4F7F;&#x7528;&#x5386;&#x53F2;&#x7684;&#x67B6;&#x6784;&#x548C;&#x6307;&#x6807;&#xFF0C;&#x6765;&#x4F30;&#x8BA1;&#x5B50;&#x7F51;&#x7EDC;&#x7684;&#x503C;&#x3002; &#x7136;&#x540E;&#x4F1A;&#x9009;&#x62E9;&#x6700;&#x6709;&#x5E0C;&#x671B;&#x7684;&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x8BAD;&#x7EC3;&#x3002; <a href="https://arxiv.org/abs/1806.10282" target="_blank">&#x53C2;&#x8003;&#x8BBA;&#x6587;</a></td>
+</tr>
+<tr>
+<td><a href="#MetisTuner"><strong>Metis Tuner</strong></a></td>
+<td>&#x5927;&#x591A;&#x6570;&#x8C03;&#x53C2;&#x5DE5;&#x5177;&#x4EC5;&#x4EC5;&#x9884;&#x6D4B;&#x6700;&#x4F18;&#x914D;&#x7F6E;&#xFF0C;&#x800C; Metis &#x7684;&#x4F18;&#x52BF;&#x5728;&#x4E8E;&#x6709;&#x4E24;&#x4E2A;&#x8F93;&#x51FA;&#xFF1A;(a) &#x6700;&#x4F18;&#x914D;&#x7F6E;&#x7684;&#x5F53;&#x524D;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#xFF0C; &#x4EE5;&#x53CA; (b) &#x4E0B;&#x4E00;&#x6B21; Trial &#x7684;&#x5EFA;&#x8BAE;&#x3002; &#x5B83;&#x4E0D;&#x8FDB;&#x884C;&#x968F;&#x673A;&#x53D6;&#x6837;&#x3002; &#x5927;&#x591A;&#x6570;&#x5DE5;&#x5177;&#x5047;&#x8BBE;&#x8BAD;&#x7EC3;&#x96C6;&#x6CA1;&#x6709;&#x566A;&#x58F0;&#x6570;&#x636E;&#xFF0C;&#x4F46; Metis &#x4F1A;&#x77E5;&#x9053;&#x662F;&#x5426;&#x9700;&#x8981;&#x5BF9;&#x67D0;&#x4E2A;&#x8D85;&#x53C2;&#x91CD;&#x65B0;&#x91C7;&#x6837;&#x3002; <a href="https://www.microsoft.com/en-us/research/publication/metis-robustly-tuning-tail-latencies-cloud-systems/" target="_blank">&#x53C2;&#x8003;&#x8BBA;&#x6587;</a></td>
+</tr>
+<tr>
+<td><a href="#BOHB"><strong>BOHB</strong></a></td>
+<td>BOHB &#x662F; Hyperband &#x7B97;&#x6CD5;&#x7684;&#x540E;&#x7EED;&#x5DE5;&#x4F5C;&#x3002; Hyperband &#x5728;&#x751F;&#x6210;&#x65B0;&#x7684;&#x914D;&#x7F6E;&#x65F6;&#xFF0C;&#x6CA1;&#x6709;&#x5229;&#x7528;&#x5DF2;&#x6709;&#x7684; Trial &#x7ED3;&#x679C;&#xFF0C;&#x800C;&#x672C;&#x7B97;&#x6CD5;&#x5229;&#x7528;&#x4E86; Trial &#x7ED3;&#x679C;&#x3002; BOHB &#x4E2D;&#xFF0C;HB &#x8868;&#x793A; Hyperband&#xFF0C;BO &#x8868;&#x793A;&#x8D1D;&#x53F6;&#x65AF;&#x4F18;&#x5316;&#xFF08;Byesian Optimization&#xFF09;&#x3002; BOHB &#x4F1A;&#x5EFA;&#x7ACB;&#x591A;&#x4E2A; TPE &#x6A21;&#x578B;&#xFF0C;&#x4ECE;&#x800C;&#x5229;&#x7528;&#x5DF2;&#x5B8C;&#x6210;&#x7684; Trial &#x751F;&#x6210;&#x65B0;&#x7684;&#x914D;&#x7F6E;&#x3002; <a href="https://arxiv.org/abs/1807.01774" target="_blank">&#x53C2;&#x8003;&#x8BBA;&#x6587;</a></td>
+</tr>
+<tr>
+<td><a href="#GPTuner"><strong>GP Tuner</strong></a></td>
+<td>Gaussian Process&#xFF08;&#x9AD8;&#x65AF;&#x8FC7;&#x7A0B;&#xFF09; Tuner &#x662F;&#x5E8F;&#x5217;&#x5316;&#x7684;&#x57FA;&#x4E8E;&#x6A21;&#x578B;&#x4F18;&#x5316;&#xFF08;SMBO&#xFF09;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x4E86;&#x9AD8;&#x65AF;&#x8FC7;&#x7A0B;&#x6765;&#x66FF;&#x4EE3;&#x3002; <a href="https://papers.nips.cc/paper/4443-algorithms-for-hyper-parameter-optimization.pdf" target="_blank">&#x53C2;&#x8003;&#x8BBA;&#x6587;</a>&#xFF0C;<a href="https://github.com/fmfn/BayesianOptimization" target="_blank">Github &#x5E93;</a></td>
+</tr>
+<tr>
+<td><a href="#PPOTuner"><strong>PPO Tuner</strong></a></td>
+<td>PPO Tuner &#x662F;&#x57FA;&#x4E8E; PPO &#x7B97;&#x6CD5;&#x7684;&#x5F3A;&#x5316;&#x5B66;&#x4E60; Tuner&#x3002; <a href="https://arxiv.org/abs/1707.06347" target="_blank">&#x53C2;&#x8003;&#x8BBA;&#x6587;</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
+<p><a href="https://nni.readthedocs.io/en/latest/Overview.html" target="_blank">NNI &#x5B98;&#x65B9;&#x6587;&#x6863;</a></p>
+<p><a href="https://github.com/microsoft/nni" target="_blank">NNI &#x4EE3;&#x7801;&#x4ED3;&#x5E93;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 自动化机器学习">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"NNI","level":"1.4.1","depth":2,"previous":{"title":"自动化机器学习","level":"1.4","depth":1,"path":"AutoML/README.md","ref":"AutoML/README.md","articles":[{"title":"NNI","level":"1.4.1","depth":2,"path":"AutoML/note1/note.md","ref":"AutoML/note1/note.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"AutoML/note1/note.md","mtime":"2019-12-28T06:46:34.664Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-28T06:48:10.943Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
